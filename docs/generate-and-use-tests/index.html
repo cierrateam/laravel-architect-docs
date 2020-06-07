@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Generating and using tests with Laravel Architect">
+
+        <meta property="og:site_name" content="Laravel Architect"/>
+        <meta property="og:title" content="Generate and use tests | Laravel Architect"/>
+        <meta property="og:description" content="Generating and using tests with Laravel Architect"/>
+        <meta property="og:url" content="https://my-jigsaw-docs.com/docs/generate-and-use-tests"/>
+        <meta property="og:image" content="/assets/img/logo.png"/>
+        <meta property="og:type" content="website"/>
+
+        <meta name="twitter:image:alt" content="Laravel Architect">
+        <meta name="twitter:card" content="summary_large_image">
+
+        
+        <title>Laravel Architect | Generate and use tests</title>
+
+        <link rel="home" href="https://my-jigsaw-docs.com">
+        <link rel="icon" href="/favicon.ico">
+
+        
+                    <!-- Insert analytics code here -->
+        
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=758205b15205bc3831b8">
+
+            </head>
+
+    <body class="flex flex-col justify-between min-h-screen bg-gray-100 text-gray-800 leading-normal font-sans">
+        <header class="flex items-center shadow bg-white border-b h-24 mb-8 py-4" role="banner">
+            <div class="container flex items-center max-w-8xl mx-auto px-4 lg:px-8">
+                <div class="flex items-center">
+                    <a href="/" title="Laravel Architect home" class="inline-flex items-center">
+                        <img class="h-8 md:h-10 mr-3" src="/assets/img/logo-black.svg" alt="Laravel Architect logo" />
+
+                        
+                    </a>
+                </div>
+
+                <div class="flex flex-1 justify-end items-center text-right md:pl-10">
+                                    </div>
+            </div>
+
+                <button class="flex justify-center items-center bg-blue-500 border border-blue-500 h-10 mr-4 px-5 rounded-full lg:hidden focus:outline-none"
+    onclick="navMenu.toggle()"
+>
+    <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"
+        class="fill-current text-white h-9 w-4" viewBox="0 0 32 32"
+    >
+        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+    </svg>
+
+    <svg id="js-nav-menu-hide" xmlns="http://www.w3.org/2000/svg"
+        class="hidden fill-current text-white h-9 w-4" viewBox="0 0 36 30"
+    >
+        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+    </svg>
+</button>
+
+        </header>
+
+        <main role="main" class="w-full flex-auto">
+            <section class="container max-w-8xl mx-auto px-6 md:px-8 py-4">
+    <div class="flex flex-col lg:flex-row">
+        <nav id="js-nav-menu" class="nav-menu hidden lg:block">
+            <ul class="my-0">
+            <li class="pl-4">
+            
+        <a href="/docs/getting-started"
+            class="lvl0   nav-menu__item hover:text-blue-500"
+        >
+            Getting Started
+        </a>
+    
+    </li>
+            <li class="pl-4">
+            
+        <a href="/docs/generating-files"
+            class="lvl0 lvl0-active  nav-menu__item hover:text-blue-500"
+        >
+            Generating Files
+        </a>
+    
+            
+        <ul class="my-0">
+            <li class="pl-4">
+            
+        <a href="/docs/generating-commands"
+            class="lvl1   nav-menu__item hover:text-blue-500"
+        >
+            Generating Commands
+        </a>
+    
+    </li>
+            <li class="pl-4">
+            
+        <a href="/docs/generate-and-use-tests"
+            class="lvl1  active font-semibold text-blue-500 nav-menu__item hover:text-blue-500"
+        >
+            Generating Tests and running them
+        </a>
+    
+    </li>
+    </ul>
+    </li>
+            <li class="pl-4">
+            
+        <a href="https://cierra.de"
+            class="lvl0   nav-menu__item hover:text-blue-500"
+        >
+            Cierra Website
+        </a>
+    
+    </li>
+    </ul>
+        </nav>
+
+        <div class="DocSearch-content w-full lg:w-3/5 break-words pb-16 lg:pl-4" v-pre>
+            <h1>Generate and use tests</h1>
+
+<p>If you initiated your package with laravel architect, you'll get a package shipped with the <a href="https://github.com/orchestral/testbench">orchestra testbench</a> suite, completely configured to work with phpunit. It will automatically discover the directory <code>Tests/</code> for you and will run all files ending with the suffix <code>Test.php</code>.</p>
+
+<h2>Generating new tests</h2>
+
+<p>To generate a new test you just have to run <code>architect make:test FooIsBarTest</code>. Please remember to change <code>FooIsBarTest</code> with the actual name of your test.<br>
+This will generate an empty test for you:</p>
+
+<pre><code class="language-php">&lt;?php
+
+namespace Tests;
+
+class FooIsBarTest extends TestCase
+{
+    /**
+     * A basic feature test example.
+     *
+     * @return void
+     */
+    public function testExample()
+    {
+        $response = $this-&gt;get('/');
+
+        $response-&gt;assertStatus(200);
+    }
+}
+
+</code></pre>
+
+<h2>Using the tests</h2>
+
+<p>Using tests in a package is quite similar to normal Laravel tests. I'll not be too detailed here regarding the general usage of tests in a package environment, but here is a rough overwiew:</br></p>
+
+<h3>Running the tests</h3>
+
+<p>To run the tests you have to install the composer things first with <code>composer install</code>. Then you can run phpunit with <code>./vendor/bin/phpunit</code>.</p>
+
+<blockquote>
+  <p>Hint: You should create an alias for it, I use this: <code>alias phpunit="vendor/bin/phpunit"</code></p>
+</blockquote>
+
+<h3>Custom Service Provider</h3>
+
+<p>To load your package service provider, override the <code>getPackageProviders</code>.</p>
+
+<pre><code class="language-php">protected function getPackageProviders($app)
+{
+    return ['Acme\AcmeServiceProvider'];
+}
+</code></pre>
+
+<h3>Custom Aliases</h3>
+
+<p>To load your package alias, override the <code>getPackageAliases</code>.</p>
+
+<pre><code class="language-php">protected function getPackageAliases($app)
+{
+    return [
+        'Acme' =&gt; 'Acme\Facade'
+    ];
+}
+</code></pre>
+
+<h3>Overriding setUp() method</h3>
+
+<p>Since <code>Orchestra\Testbench\TestCase</code> replace Laravel's <code>Illuminate\Foundation\Testing\TestCase</code>, if you need your own <code>setUp()</code> implementation, do not forget to call <code>parent::setUp()</code> and make sure proper declaration compatibility:</p>
+
+<pre><code class="language-php">/**
+ * Setup the test environment.
+ */
+protected function setUp(): void
+{
+    parent::setUp();
+
+    // Your code here
+}
+</code></pre>
+
+<h3>Setup Environment</h3>
+
+<p>If you need to add something early in the application bootstrapping process (which executed between registering service providers and booting service providers) you could use the <code>getEnvironmentSetUp()</code> method, but we already configured some basic settings for you:</p>
+
+<pre><code class="language-php">/**
+ * Define environment setup.
+ *
+ * @param  \Illuminate\Foundation\Application  $app
+ * @return void
+ */
+protected function getEnvironmentSetUp($app)
+{
+    // Setup default database to use sqlite :memory:
+    $app['config']-&gt;set('database.default', 'testbench');
+    $app['config']-&gt;set('database.connections.testbench', [
+        'driver'   =&gt; 'sqlite',
+        'database' =&gt; ':memory:',
+        'prefix'   =&gt; '',
+    ]);
+}
+</code></pre>
+
+<h3>Setup Environment using Annotation</h3>
+
+<p>New in Testbench Core 4.4 is the ability to use <code>@environment-setup</code> annotation to customise use of <code>getEnvironmentSetUp</code> specific for each test.</p>
+
+<pre><code class="language-php">protected function useMySqlConnection($app) 
+{
+    $app-&gt;config-&gt;set('database.default', 'mysql');
+}
+
+protected function useSqliteConnection($app)
+{
+    $app-&gt;config-&gt;set('database.default', 'sqlite');
+}
+
+/**
+ * @environment-setup useMySqlConnection
+ */
+public function testItCanBeConnectedWithMySql()
+{
+    // write your tests
+}
+
+/**
+ * @environment-setup useSqliteConnection
+ */
+public function testItCanBeConnectedWithSqlite()
+{
+    // write your tests
+}
+</code></pre>
+
+<h3>Overriding Console Kernel</h3>
+
+<p>You can easily swap Console Kernel for application bootstrap by overriding <code>resolveApplicationConsoleKernel()</code> method:</p>
+
+<pre><code class="language-php">/**
+ * Resolve application Console Kernel implementation.
+ *
+ * @param  \Illuminate\Foundation\Application  $app
+ * @return void
+ */
+protected function resolveApplicationConsoleKernel($app)
+{
+    $app-&gt;singleton('Illuminate\Contracts\Console\Kernel', 'Acme\Testbench\Console\Kernel');
+}
+</code></pre>
+
+<h3>Overriding HTTP Kernel</h3>
+
+<p>You can easily swap HTTP Kernel for application bootstrap by overriding <code>resolveApplicationHttpKernel()</code> method:</p>
+
+<pre><code class="language-php">/**
+ * Resolve application HTTP Kernel implementation.
+ *
+ * @param  \Illuminate\Foundation\Application  $app
+ * @return void
+ */
+protected function resolveApplicationHttpKernel($app)
+{
+    $app-&gt;singleton('Illuminate\Contracts\Http\Kernel', 'Acme\Testbench\Http\Kernel');
+}
+</code></pre>
+
+<h3>Overriding Application Timezone</h3>
+
+<p>You can also easily override application default timezone, instead of the default <code>"UTC"</code>:</p>
+
+<pre><code class="language-php">/**
+ * Get application timezone.
+ *
+ * @param  \Illuminate\Foundation\Application  $app
+ * @return string|null
+ */
+protected function getApplicationTimezone($app)
+{
+    return 'Asia/Kuala_Lumpur';
+}
+</code></pre>
+
+<h3>Using Migrations</h3>
+
+<p>Package developer should be using <code>ServiceProvider::loadMigrationsFrom()</code> feature to automatically handle migrations for packages.</p>
+
+<pre><code class="language-php">$this-&gt;artisan('migrate', ['--database' =&gt; 'testbench'])-&gt;run();
+</code></pre>
+
+<h4>Using Laravel Migrations</h4>
+
+<p>By default Testbench doesn't execute the default Laravel migrations which include <code>users</code> and <code>password_resets</code> table. In order to run the migration just add the following command:</p>
+
+<pre><code class="language-php">$this-&gt;loadLaravelMigrations();
+</code></pre>
+
+<p>You can also set specific database connection to be used by adding <code>--database</code> options:</p>
+
+<pre><code class="language-php">$this-&gt;loadLaravelMigrations(['--database' =&gt; 'testbench']);
+</code></pre>
+
+<h4>Running Testing Migrations</h4>
+
+<p>To run migrations that are <strong>only used for testing purposes</strong> and not part of your package, add the following to your base test class:</p>
+
+<pre><code class="language-php">/**
+ * Setup the test environment.
+ */
+protected function setUp(): void
+{
+    parent::setUp();
+
+    $this-&gt;loadMigrationsFrom(__DIR__ . '/database/migrations');
+
+    // and other test setup steps you need to perform
+}
+</code></pre>
+        </div>
+    </div>
+</section>
+        </main>
+
+        <script src="/assets/build/js/main.js?id=081470c930e90325d380"></script>
+
+        <script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('lg:block');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+        },
+    }
+</script>
+
+        <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
+            <ul class="flex flex-col md:flex-row justify-center">
+                <li class="md:mr-2">
+                    &copy; <a href="https://cierra.de" title="Cierra">Cierra</a> 2020.
+                </li>
+
+                <li>
+                    Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
+                    and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>
