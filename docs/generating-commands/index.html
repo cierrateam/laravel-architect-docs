@@ -129,7 +129,7 @@
 
 <h2>Generate the file</h2>
 
-<p>Generating the file is easy with laravel architect. You just have to go to your cli in your root folder of your package and type:
+<p>Generating the file is easy with laravel architect. You just have to go to your cli in the root folder of your package and type:
 <code>architect make:command CommandName</code></p>
 
 <blockquote>
@@ -138,7 +138,7 @@
 
 <h2>Register the command in your Service Provider</h2>
 
-<p>Next step is to register this command. Your app have to be informed about it. So go to your service provider which can be found in the <code>src/</code> directory of your package and is named like your app with a <code>ServiceProvivider</code> suffix.
+<p>The next step is to register this command. Your app have to be informed about it. To do so:  Open the service provider, it can be found in the <code>src/</code> directory of your package and is named like your app with a <code>ServiceProvivider</code> suffix.
 There you have to add to your mount method the command. This could look like this:</p>
 
 <pre><code class="language-php">/**
@@ -159,12 +159,12 @@ public function boot()
 }
 </code></pre>
 
-<p>For further informations check out following docs: <a href="https://laravel.com/docs/7.x/packages#commands">Laravel Docs - Package development</a></p>
+<p>For further information check out following docs: <a href="https://laravel.com/docs/7.x/packages#commands">Laravel Docs - Package development</a></p>
 
 <h2>Write your logic</h2>
 
-<p>First, adjust the command's signature. This is the unique identifier which will be typed into the CLI. If your signature is <code>foo:make</code> you can call your command with <code>php artisan foo:make</code> later.<br>
-For further informations checkout this link to the <a href="https://laravel.com/docs/7.x/artisan#writing-commands">Laravel Docs</a></p>
+<p>First, adjust the command's signature. This is the unique identifier that your users will have to type into the CLI. If your signature is <code>foo:make</code> you can call your command with <code>php artisan foo:make</code> later.<br>
+For further information check out this link to the <a href="https://laravel.com/docs/7.x/artisan#writing-commands">Laravel Docs</a></p>
         </div>
     </div>
 </section>
