@@ -8,7 +8,7 @@
 
             <h2 id="intro-powered-by-jigsaw" class="font-light mt-4">{{ $page->siteDescription }}</h2>
 
-            <p class="text-lg">Be awesome at creating laravel packages. <br class="hidden sm:block">Start using artisan commands on package layer.</p>
+            <p class="text-lg">How often did you miss "php artisan" on package layer? <br class="hidden sm:block">Start using artisan with architect.</p>
 
             <div class="flex my-10">
                 <a href="/docs/getting-started" title="{{ $page->siteName }} getting started" class="bg-blue-500 hover:bg-blue-600 font-normal text-white hover:text-white rounded mr-4 py-2 px-6">Get Started</a>
