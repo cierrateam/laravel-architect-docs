@@ -31,7 +31,7 @@
                     <!-- Insert analytics code here -->
         
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
-        <link rel="stylesheet" href="/assets/build/css/main.css?id=758205b15205bc3831b8">
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=2254091d7d5760f63341">
 
             </head>
 
@@ -112,15 +112,6 @@
     </li>
     </ul>
     </li>
-            <li class="pl-4">
-            
-        <a href="https://cierra.de"
-            class="lvl0   nav-menu__item hover:text-blue-500"
-        >
-            Cierra Website
-        </a>
-    
-    </li>
     </ul>
         </nav>
 
@@ -134,7 +125,7 @@
 
 <h2>Generate the file</h2>
 
-<p>Generating the file is easy with laravel architect. You just have to go to your cli in the root folder of your package and type:
+<p>Generating the file is easy with Laravel Architect. You just have to go to your cli in the root folder of your package and type:
 <code>architect make:command CommandName</code></p>
 
 <blockquote>
@@ -143,7 +134,7 @@
 
 <h2>Register the command in your Service Provider</h2>
 
-<p>The next step is to register this command. Your app have to be informed about it. To do so:  Open the service provider, it can be found in the <code>src/</code> directory of your package and is named like your app with a <code>ServiceProvivider</code> suffix.
+<p>The next step is to register this command. Your app has to be informed about it. To do so:  Open the service provider, it can be found in the <code>src/</code> directory of your package and is named like your app with a <code>ServiceProvivider</code> suffix.
 There you have to add to your mount method the command. This could look like this:</p>
 
 <pre><code class="language-php">/**
@@ -156,7 +147,7 @@ public function boot()
     // Just register them if your app is running in console
     if ($this-&gt;app-&gt;runningInConsole()) { 
         $this-&gt;commands([
-            // The full classname of your command, make sure you'd import them.
+            // The full classname of your command, make sure you did import them.
             FooCommand::class, 
             BarCommand::class,
         ]);
@@ -192,12 +183,12 @@ For further information check out this link to the <a href="https://laravel.com/
         <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
             <ul class="flex flex-col md:flex-row justify-center">
                 <li class="md:mr-2">
-                    &copy; <a href="https://cierra.de" title="Cierra">Cierra</a> 2020.
+                    &copy; <a href="https://cierra.de" target="_blank" title="cierra's Homepage">Cierra</a> 2020.
                 </li>
 
                 <li>
-                    Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
-                    and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
+                    Built with <a href="http://jigsaw.tighten.co" target="_blank" title="Jigsaw by Tighten">Jigsaw</a>
+                    and <a href="https://tailwindcss.com" target="_blank" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
                 </li>
             </ul>
         </footer>
