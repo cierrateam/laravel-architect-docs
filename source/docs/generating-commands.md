@@ -12,12 +12,12 @@ If you want to have commands installed with your package you just have to do thr
 3. Write your logic<br>
 
 ## Generate the file
-Generating the file is easy with laravel architect. You just have to go to your cli in the root folder of your package and type:
+Generating the file is easy with Laravel Architect. You just have to go to your cli in the root folder of your package and type:
 `architect make:command CommandName`
 > You have to replace `CommandName` with the actual command name you want to get.
 
 ## Register the command in your Service Provider
-The next step is to register this command. Your app have to be informed about it. To do so:  Open the service provider, it can be found in the `src/` directory of your package and is named like your app with a `ServiceProvivider` suffix.
+The next step is to register this command. Your app has to be informed about it. To do so:  Open the service provider, it can be found in the `src/` directory of your package and is named like your app with a `ServiceProvivider` suffix.
 There you have to add to your mount method the command. This could look like this:
 ```php
 /**
@@ -30,7 +30,7 @@ public function boot()
     // Just register them if your app is running in console
     if ($this->app->runningInConsole()) { 
         $this->commands([
-            // The full classname of your command, make sure you'd import them.
+            // The full classname of your command, make sure you did import them.
             FooCommand::class, 
             BarCommand::class,
         ]);

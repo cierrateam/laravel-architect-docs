@@ -1,33 +1,8 @@
-# Jigsaw Docs Starter Template
+# Laravel Architect Docs
 
-This is a starter template for creating a beautiful, customizable documentation site for your project with minimal effort. You’ll only have to change a few settings and you’re ready to go.
+This is the documentation to Laravel architect by cierra.
 
-[View a preview of the docs template.](http://jigsaw-docs-staging.tighten.co/)
-
-## Installation
-
-After installing Jigsaw, run the following command from your project directory:
-
-```bash
-./vendor/bin/jigsaw init docs
-```
-
-This starter template includes samples of common page types, and comes pre-configured with:
-
-- A fully responsive navigation bar
-- A sidebar navigation menu
-- [Tailwind CSS](https://tailwindcss.com/), a utility CSS framework that allows you to customize your design without touching a line of CSS
-- [Purgecss](https://www.purgecss.com/) to remove unused selectors from your CSS, resulting in smaller CSS files
-- Syntax highlighting using [highlight.js](https://highlightjs.org/)
-- A script that automatically generates a `sitemap.xml` file
-- A search bar powered by [Algolia DocSearch](https://community.algolia.com/docsearch/), and instructions on how to get started with their free indexing service
-- A custom 404 page
-
----
-
-![Docs starter template screenshot](https://user-images.githubusercontent.com/357312/50345478-40170c00-04fd-11e9-856c-ad46d1ac45cb.png)
-
----
+[Laravel Architect](https://architect.cierra.de)
 
 ### Configuring your new site
 
