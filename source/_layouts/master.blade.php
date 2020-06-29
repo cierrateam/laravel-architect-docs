@@ -76,12 +76,12 @@
         <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
             <ul class="flex flex-col md:flex-row justify-center">
                 <li class="md:mr-2">
-                    &copy; <a href="https://cierra.de" title="Cierra">Cierra</a> {{ date('Y') }}.
+                    &copy; <a href="https://cierra.de" target="_blank" title="cierra's Homepage">Cierra</a> {{ date('Y') }}.
                 </li>
 
                 <li>
-                    Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
-                    and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
+                    Built with <a href="http://jigsaw.tighten.co" target="_blank" title="Jigsaw by Tighten">Jigsaw</a>
+                    and <a href="https://tailwindcss.com" target="_blank" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
                 </li>
             </ul>
         </footer>

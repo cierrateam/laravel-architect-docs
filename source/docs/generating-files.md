@@ -6,4 +6,4 @@ section: content
 ---
 
 # Generating files 
-The core feature of laravel architect is to generate boilerplate files initially and ongoing.
+The core feature of Laravel Architect is to generate boilerplate files initially and ongoing.

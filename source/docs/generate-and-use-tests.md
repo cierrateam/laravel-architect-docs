@@ -6,7 +6,7 @@ section: content
 ---
 
 # Generate and use tests
-If you initiated your package with laravel architect, you'd get a package shipped with the [orchestra testbench](https://github.com/orchestral/testbench) suite, wholly configured to work with phpunit. It will automatically discover the directory `Tests/` for you and will run all files ending with the suffix `Test.php`.
+If you initiated your package with Laravel architect, you get a package shipped with the [orchestra testbench](https://github.com/orchestral/testbench) suite, wholly configured to work with phpunit. It will automatically discover the directory `Tests/` for you and will run all files ending with the suffix `Test.php`.
 
 ## Generating new tests
 To generate a new test, you have to run `architect make:test FooIsBarTest`. Please remember to change `FooIsBarTest` with the actual name of your test.<br>
@@ -37,8 +37,8 @@ class FooIsBarTest extends TestCase
 ## Using the tests
 Using tests in a package is quite similar to normal Laravel tests. I'll not be too detailed here regarding the general usage of tests in a package environment, but here is a rough overview:</br>
 ### Running the tests
-To run the tests you have to install the composer things first with `composer install`. Then you can run phpunit with `./vendor/bin/phpunit`.
-> Hint: You should create an alias for it, I use this: `alias phpunit="vendor/bin/phpunit"`
+To run the tests you have to install the requirements via composer first by running `composer install`. Then you can run phpunit with `./vendor/bin/phpunit`.
+> Hint: You should create an alias for it, I use this one: `alias phpunit="vendor/bin/phpunit"`
 
 ### Custom Service Provider
 

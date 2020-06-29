@@ -7,7 +7,7 @@ section: content
 
 # Getting Started {#getting-started}
 
-Laravel Architect was created and is maintained by [Vittorio Emmermann](https://github.com/vittorioe), founder of [cierra](https://cierra.de/). It's a helper you can install globally or locally for individual packages. Laravel Architect is supposed to take care of recurring grunt work, like creating a Test Class for your laravel package. Here's an example, you can easily do this `architect make:test MyAwesomeTest` and Laravel Architect will create the Test Class for you - inside your package. How nice is that?!
+Laravel Architect was created and is maintained by [Vittorio Emmermann](https://github.com/vittorioe), founder of [cierra](https://cierra.de/). It's a helper you can install globally or locally for individual packages. Laravel Architect is supposed to take care of recurring grunt work, like creating a Test Class for your Laravel package. Here's an example, you can easily do this `architect make:test MyAwesomeTest` and Laravel Architect will create the Test Class for you - inside your package. How nice is that?!
 
 - It is built on top of the [Laravel Zero](https://laravel-zero.com/).
 - Installable global to your machine as general helper.
@@ -43,7 +43,7 @@ Then just answer the questions.
 
 ## License
 
-Laravel Architect is open-source software licensed under the [MIT license](https://github.com/laravel-architect/laravel-architect/blob/stable/LICENSE.md).
+Laravel Architect is open-source software licensed under the [MIT license](https://github.com/cierrateam/laravel-architect/blob/master/LICENSE.md).
 
 ## Credits
 This package is made by cierra and is coded with support of community packages.
